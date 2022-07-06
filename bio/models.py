@@ -1,4 +1,3 @@
-from tkinter import Button
 from django.db import models
 from account.models import NewUser
 # Create your models here.
