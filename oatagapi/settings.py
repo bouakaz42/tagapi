@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'account', 
     'bio',
-    'qrapp'
+    'qrapp',
+    'shorturl'
 ]
 
 MIDDLEWARE = [
