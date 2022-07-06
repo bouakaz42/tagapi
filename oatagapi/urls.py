@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from account.models import NewUser
+from bio.views import biolink
 
 from rest_framework import routers, serializers, viewsets
 from rest_framework.permissions import  AllowAny
@@ -41,9 +42,10 @@ router.register(r'users', UserViewSet)
 
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('<str:page_alias>', biolink, name='biolink'),
     path('admin/', admin.site.urls),
     path('auth/', include('account.urls') , name='auth_urls'),
+    path('bio/', include('bio.urls') , name='bio_urls'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

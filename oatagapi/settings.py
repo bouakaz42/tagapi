@@ -141,6 +141,8 @@ REST_FRAMEWORK = {
      'DEFAULT_AUTHENTICATION_CLASSES': [
         #what are the other classes
         'rest_framework.authentication.TokenAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+
     ],
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
@@ -148,9 +150,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         #for only authenticated users
         # what are the other classes for permissions and authentication
-
-        
         'rest_framework.permissions.AllowAny',
+
         'rest_framework.permissions.IsAuthenticated',
 
 
