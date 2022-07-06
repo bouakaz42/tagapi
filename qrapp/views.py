@@ -22,7 +22,7 @@ class QrList(generics.ListCreateAPIView):
 
 class QrDetails(generics.RetrieveUpdateDestroyAPIView):
     queryset = Qrcode.objects.all()
-    serializer_class = Qrcode
+    serializer_class = QrcodeSerializer
     permission_classes = (IsAuthenticated,)
     renderer_classes = (JSONRenderer,)
     def get_queryset(self):
