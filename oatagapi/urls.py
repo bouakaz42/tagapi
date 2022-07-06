@@ -14,6 +14,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('account.urls') , name='auth_urls'),
     path('bio/', include('bio.urls') , name='bio_urls'),
+    path('qr/', include('qrapp.urls') , name='qr_urls'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
